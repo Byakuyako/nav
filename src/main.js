@@ -12,7 +12,7 @@ const hashMap = xObject || [{
     url: 'https://www.bilibili.com'
   }
 ]
-
+// 简化url
 const simplifyUrl = (url) => {
   return url.replace('https://', '')
     .replace('http://', '')
