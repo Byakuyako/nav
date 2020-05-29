@@ -1,10 +1,11 @@
 * {
   margin: 0;
-  padding: 0
+  padding: 0;
+  box-sizing: border-box;
 }
 
-* {
-  box-sizing: border-box
+body {
+  background-color: #eee;
 }
 
 ul,
@@ -30,13 +31,17 @@ body {
 }
 
 .globalHeader {
-  /*border: 1px solid red;*/
   margin: 20px;
+}
+
+.globalHeader .searchForm {
+  /*border: 1px solid red;*/
+  /* margin: 20px; */
   display: flex;
   justify-content: space-between;
 }
 
-.globalHeader>input {
+.globalHeader input {
   width: 100%;
   margin-right: 10px;
   height: 40px;
@@ -46,7 +51,7 @@ body {
   border-radius: 4px;
 }
 
-.globalHeader>button {
+.globalHeader button {
   padding: 0 28px;
   white-space: nowrap;
   border: none;
@@ -56,8 +61,17 @@ body {
   font-size: 16px;
 }
 
+.globalHeader button:hover {
+  cursor: pointer;
+}
+
+
+
 .globalMain {
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .siteList {
@@ -79,8 +93,11 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  border-radius: 4px;
   background: white;
   padding: 20px 0;
+  position: relative;
+  cursor: pointer;
 }
 
 .siteList .site>.logo {
@@ -99,15 +116,37 @@ body {
   margin-top: 4px;
 }
 
-.siteList .addButton {
+
+.siteList .site:hover {
+  box-shadow: 0px 3px 3px #c8c8c8;
+  border: 1px solid #379292;
+}
+
+.siteList .site .close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  /* visibility: hidden; */
+  display: none;
+  cursor: default;
+}
+
+.siteList .site:hover .close {
+  display: block;
+}
+
+/* .siteList .addButton {
+  border: 1px solid #ddd;
+  background-color: white;
   width: 160px;
-  /*border: 1px solid red;*/
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 20px 0;
-}
+  cursor: pointer;
+} */
+
 
 .siteList .addButton .iconWrapper {
   /*border: 1px solid red;*/
@@ -126,4 +165,26 @@ body {
 .siteList .addButton .text {
   font-size: 14px;
   margin-bottom: 4px;
+}
+
+@media (min-width: 500px) {
+  .globalHeader {
+    margin: 60px 0 100px;
+  }
+
+  .searchForm {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .siteList {
+    margin-left: 0;
+    margin-right: -25px;
+    justify-content: flex-start;
+  }
+
+  .siteList>li {
+    margin-right: 25px;
+  }
 }

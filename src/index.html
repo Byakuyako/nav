@@ -7,17 +7,27 @@
     content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>前航 - 前端导航网站</title>
+  <style type="text/css">
+    .icon {
+      width: 1em;
+      height: 1em;
+      vertical-align: -0.15em;
+      fill: currentColor;
+      overflow: hidden;
+    }
+  </style>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <header class="globalHeader">
-    <input type="text">
-    <button>搜索</button>
+    <form class="searchForm" method="GET" action="https://www.baidu.com/s">
+      <input name="wd" type="text" class="inputBox">
+      <button type="submit">搜索</button></form>
   </header>
   <main class="globalMain">
     <ul class="siteList">
-      <li>
+      <!-- <li>
         <a href="https://acfun.com">
           <div class="site">
             <div class="logo">A</div>
@@ -32,17 +42,9 @@
             <div class="link">bilibili.com</div>
           </div>
         </a>
-      </li>
-      <li>
-        <a href="https://cctv.com">
-          <div class="site">
-            <div class="logo">C</div>
-            <div class="link">cctv.com</div>
-          </div>
-        </a>
-      </li>
+      </li> -->
       <li class="last">
-        <div class="addButton">
+        <div class="addButton site">
           <div class="iconWrapper">
             <svg class="icon">
               <use xlink:href="#icon-add"></use>
@@ -56,7 +58,7 @@
     </ul>
   </main>
   <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="//at.alicdn.com/t/font_1839213_rttcl8d2qjr.js"></script>
+  <script src="//at.alicdn.com/t/font_1839213_jgp73539i6o.js"></script>
   <script src="main.js"></script>
 </body>
 
